@@ -38,9 +38,19 @@ import img13 from './img13.jpg'
 import img14 from './img14.jpg'
 import img15 from './img15.jpg'
 import img16 from './img16.jpg'
+import saadgi from './saadgi.jpg'
+import bandish from './bandish.jpg'
+import virah from './virah.jpg'
+import qatal from './qatal.jpg'
+import whyCheatIndia from './why_cheat_india.jpg'
 import song1 from './song1.mp3'
 import song2 from './song2.mp3'
 import song3 from './song3.mp3'
+import song4 from './hindi_song_1.mp3'
+import song5 from './hindi_song_2.mp3'
+import song6 from './hindi_song_3.mp3'
+import song7 from './hindi_song_4.mp3'
+import song8 from './hindi_song_5.mp3'
 
 export const assets = {
     bell_icon,
@@ -142,41 +152,41 @@ export const songsData = [
     {
         id: 3,
         name: "Song Four",
-        image: img4,
-        file: song1,
-        desc: "Put a smile on your face with these happy tunes",
-        duration: "2:50"
+        image: saadgi,
+        file: song4,
+        desc: "Saadgi to hmari jra dekhiye",
+        duration: "6:10"
     },
     {
         id: 4,
         name: "Song Five",
-        image: img5,
-        file: song2,
-        desc: "Put a smile on your face with these happy tunes",
+        image: bandish,
+        file: song5,
+        desc: "Sajan bin aye na mohe nindiya",
         duration: "3:10"
     },
     {
         id: 5,
         name: "Song Six",
-        image: img14,
-        file: song3,
-        desc: "Put a smile on your face with these happy tunes",
+        image: virah,
+        file: song6,
+        desc: "Virah - Bandish Bandit",
         duration: "2:45"
     },
     {
         id: 6,
         name: "Song Seven",
-        image: img7,
-        file: song1,
-        desc: "Put a smile on your face with these happy tunes",
-        duration: "2:18"
+        image: whyCheatIndia,
+        file: song7,
+        desc: "To kya hua juda hue",
+        duration: "4:10"
     },
     {
         id: 7,
         name: "Song Eight",
-        image: img12,
-        file: song2,
-        desc: "Put a smile on your face with these happy tunes",
-        duration: "2:35"
+        image: qatal,
+        file: song8,
+        desc: "Qatal - Guru Randhava",
+        duration: "2:52"
     }
 ]

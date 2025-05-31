@@ -4,7 +4,7 @@ import { NavLink } from 'react-router'
 
 export const SideBar = () => {
     return (
-        <div className='w-[25%] h-full p-2 flex flex-col gap-2 text-white'>
+        <div className='hidden w-[25%] h-full p-2 lg:flex flex-col gap-2 text-white'>
             <div className='h-[15%] bg-[#121212] flex flex-col justify-around'>
                 <div className='flex gap-3 pl-8 item-center cursor-pointer'>
                     <img src={assets.home_icon} className='w-6 ' />
