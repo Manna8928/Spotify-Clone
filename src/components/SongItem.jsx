@@ -14,7 +14,7 @@ export const SongItem = (props) => {
           playSong(props.id);
 
         }}>
-            <img src={props.image} className='rounded'/>
+            <div className='h-[70%]'><img src={props.image} className='h-[100%] rounded object-cover'/></div>
             <div className='font-bold text-[12px]'>{props.name}</div>
             <div className='text-slate-200 text-[10px]'>{props.desc}</div>
         </div>
