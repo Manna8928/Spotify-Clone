@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { songsData, assets } from '../assets/assets'
 import { SongContext } from './context'
 const Player = () => {
-    const { track, audioRef, playStatus, setPlayStatus, playSong, duration, currentTime, seekBarRef} = useContext(SongContext);
+    const { track, audioRef, playStatus, setPlayStatus, playSong, duration, currentTime, seekBarRef, seekBarDivRef} = useContext(SongContext);
     // console.log("current time ",audioRef.current.currentTime)
     
     return (
@@ -32,8 +32,7 @@ const Player = () => {
                         :
 
                         <img src={assets.play_icon} className='w-5 h-5 cursor-pointer ' onClick={() => {
-                            audioRef.current.play();
-                            setPlayStatus(true)
+                            playSong(track.id);
                         }} />
 
                     }
@@ -45,7 +44,10 @@ const Player = () => {
                 </div>
                 <div className='flex items-center gap-2'>
                     <div className=''>{currentTime.min}:{currentTime.sec}</div>
-                    <div className='bg-gray-300 w-[60vw] max-w-[500px] cursor-pointer rounded-full'>
+                    <div ref={seekBarDivRef} className='bg-gray-300 w-[60vw] max-w-[500px] cursor-pointer rounded-full'
+                    onClick={(e)=>{
+                        audioRef.current.currentTime=e.nativeEvent.offsetX/ seekBarDivRef.current.offsetWidth * audioRef.current.duration;
+                    }}>
                         <hr ref={seekBarRef} className='bg-green-800 w-0 h-1 border-none rounded-full' />
                     </div>
                     <div className=''>{duration.min}:{duration.sec}</div>
